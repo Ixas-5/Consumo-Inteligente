@@ -732,5 +732,93 @@ form button:hover {
         width: 100%;
     }
 
+ /* RESPONSIVE - Extra pequeño (celulares pequeños) */
+@media (max-width: 480px) {
+
+    /* Navbar */
+    .titulo {
+        font-size: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu li a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    /* Hero */
+    .texto-hero h1 {
+        font-size: 26px;
+    }
+
+    .texto-hero p {
+        font-size: 14px;
+    }
+
+    .boton-hero {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Registro */
+    .selector-rol .botones-rol {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .boton-rol {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Formularios */
+    .formularios > div {
+        padding: 10px;
+    }
+
+    /* Login */
+    .form-login {
+        padding: 10px;
+    }
+
+    .form-login input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .mercado-footer {
+        font-size: 0.75em;
+        padding: 10px;
+    }
+
+    /* Contacto */
+    .form-contacto {
+        padding: 12px;
+    }
+
+    .form-contacto input,
+    .form-contacto textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .iconos-contacto a {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+}
+ 
+
 
 
