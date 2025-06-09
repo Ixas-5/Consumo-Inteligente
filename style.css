@@ -452,7 +452,7 @@ html {
 }
 
 .boton-rol {
-    background-color: var(--verde);
+    background-color: var(--verde-suave);
     color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
@@ -462,7 +462,7 @@ html {
 }
 
 .boton-rol:hover {
-    background-color: var(--verde-suave);
+    background-color: var(--verde);
 }
 
 .formularios > div {
