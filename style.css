@@ -139,25 +139,32 @@ html {
 /*Estilo del index principal*/
 
 /* Estilo general para el navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--marron); /* Color de fondo */
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    margin: 0;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--marron);
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
-/* Estilo para el logo */
+.navbar {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;         /* para que el contenido no esté estirado */
+  margin: 0 auto;            /* centra el navbar */
+  padding: 0 15px;           /* espacio a los lados */
+  width: 100%; 
+  box-sizing: border-box;
+}
+
 .logo {
     height: 50px;
-    width: auto;
+    margin-left: 5px;
 }
 
 /* Estilo para el título */
@@ -173,31 +180,61 @@ html {
     display: flex;
     align-items: center;
     gap: 8px; 
+    padding-left: 5px;
 }
 /* Estilo para el menú */
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Espacio entre los elementos */
-    margin: 0;
+
+#menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--texto);
+    margin: 10px 5px 10px 0;
     padding: 0;
-    margin-right: 10px;
 }
 
-/* Estilo para los enlaces del menú */
+.menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 10px 0 0;
+  width: 100%;
+}
+
+.menu.active {
+  display: flex;
+}
+
+/* --- LINKS DEL MENÚ --- */
 .menu li a {
-    text-decoration: none;
-    color: #ecf0f1;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Efecto hover */
 .menu li a:hover {
-    color: var(--marron-oscuro);
+  color: var(--marron-oscuro, #5a3d2b); /* puedes definirlo tú en :root si quieres */
 }
+
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  margin-left: auto;         /* empuja el botón a la derecha */
+}
+
+/* --- MARGEN INICIAL PARA QUE NO SE ESCONDA EL CONTENIDO --- */
+body {
+  padding-top: 100px;
+}
+
 
 /* Hero Section */
 .hero {
@@ -207,7 +244,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('hero.jpg');
+    background-image: url('Imagenes/hero.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -452,7 +489,7 @@ html {
 }
 
 .boton-rol {
-    background-color: var(--verde-suave);
+    background-color: var(--verde);
     color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
@@ -462,7 +499,7 @@ html {
 }
 
 .boton-rol:hover {
-    background-color: var(--verde);
+    background-color: var(--verde-suave);
 }
 
 .formularios > div {
@@ -471,7 +508,7 @@ html {
     max-width: 500px;
     margin: 0 auto;
     text-align: left;
-    background-color: var(--verde);
+    background-color: var(--crema);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -693,7 +730,7 @@ form button:hover {
     opacity: 0.8;
 }
 
-
+/* RESPONSIVE - Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
 
     /* Menú */
@@ -732,7 +769,27 @@ form button:hover {
         width: 100%;
     }
 
- /* RESPONSIVE - Extra pequeño (celulares pequeños) */
+    .formularios > div {
+        padding: 15px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Login */
+    .form-login {
+        padding: 15px;
+    }
+
+    /* Footer */
+    .mercado-footer {
+        font-size: 0.8em;
+    }
+}
+
+/* RESPONSIVE - Extra pequeño (celulares pequeños) */
 @media (max-width: 480px) {
 
     /* Navbar */
@@ -740,15 +797,6 @@ form button:hover {
         font-size: 20px;
     }
 
-    .menu {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .menu li a {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
 
     /* Hero */
     .texto-hero h1 {
@@ -818,7 +866,4 @@ form button:hover {
         margin: 0 5px;
     }
 }
- 
-
-
 
