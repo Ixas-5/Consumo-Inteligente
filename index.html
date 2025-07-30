@@ -1,9 +1,9 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumo Inteligente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head> 
 
@@ -11,21 +11,29 @@
     <header>
         <nav class="navbar">
             <div class="logo-titulo">
-            <img src="logo.png" alt="Logo de Consumo Inteligente" class="logo">
+            <img src="Imagenes/logo.png" alt="Logo de Consumo Inteligente" class="logo">
             <h1 class="titulo">Consumo Inteligente</h1>
             </div>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio </a></li>
-                <li><a href="#sobre">¿Quienes Somos?</a></li>
-                <li><a href="#mercado">Mercado</a></li>
-                <li><a href="#registro">Regístrate</a></li>
-                <li><a href="#login">Iniciar Sesión</a></li>
-                <li><a href="#contacto">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
+        
+        <button id="menu-toggle" class="menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
 
-    <main>
+    
+        <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre Nosotros</a></li>
+                <li><a href="#mercado">Mercado</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
         <section class="hero" id="inicio">
             <div class="texto-hero">
                 <h1>Apoya lo local:</h1>
@@ -70,7 +78,7 @@
 
     <div class="mapa">
         <h3>Zonas de Producción en Puerto Rico</h3>
-        <img src="mapa.jpg" alt="Mapa de Zonas de Producción en Puerto Rico">
+        <img src="Imagenes/mapa.jpg" alt="Mapa de Zonas de Producción en Puerto Rico">
     </div>
 
     <div class="frases">
@@ -90,7 +98,7 @@
 </section>
 
 
-  <section id="registro" class="registro">
+<section id="registro" class="registro">
     <h2>Regístrate</h2>
     <p class="ventajas-registro">
         Al registrarte en Consumo Inteligente podrás:
@@ -163,22 +171,23 @@
             ¿Tienes preguntas? Estamos aquí para ayudarte.
         </p>
 
-       <form action="https://formsubmit.co/isabellanahir@gmail.com" method="POST" class="form-contacto">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <textarea name="message" placeholder="Tu mensaje" required></textarea>
-        <button type="submit" class="boton-principal">Enviar</button>
+        <form class="form-contacto" action="https://formsubmit.co/isabellanahir@gmail.com" method="POST">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="boton-principal">Enviar</button>
         </form>
 
-
         <div class="iconos-contacto">
-            <a href="https://wa.me/7873797270" target="_blank">📱 WhatsApp</a>
-            <a href="mailto:isabellanahir@gmail.com">✉️ Correo</a>
+            <a href="https://wa.me/17873797270" target="_blank" rel="noopener nonreferrer">📱 WhatsApp</a>
+            <a href="isabellanahir@gmail.com"></a> >✉️ Correo</a>
         </div>
-         <footer class="footer">
+
+        <footer class="footer">
             <p>© 2025 Isabella N. Rivera Rivera. Todos los derechos reservados.</p>
         </footer>
     </section>
 </main>
+<script src="script.js" defer></script>
 </body>
 </html>
